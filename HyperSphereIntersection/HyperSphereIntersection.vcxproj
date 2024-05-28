@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HyperSphere.h" />
+    <ClInclude Include="IntersectingHyperSphere.h" />
     <ClInclude Include="Intersection.h" />
     <ClInclude Include="IntersectionRelation.h" />
   </ItemGroup>

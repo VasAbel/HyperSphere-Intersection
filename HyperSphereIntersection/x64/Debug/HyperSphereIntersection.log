@@ -1,0 +1,8 @@
+﻿  HyperSphere.cpp
+  main.cpp
+  Intersection.cpp
+  Point.cpp
+  Point.h
+  Generating Code...
+x64\Debug\Point.obj : warning LNK4042: object specified more than once; extras ignored
+  HyperSphereIntersection.vcxproj -> C:\Egyetem\HyperSphere-Intersection\x64\Debug\HyperSphereIntersection.exe

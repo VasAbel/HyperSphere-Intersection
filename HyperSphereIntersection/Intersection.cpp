@@ -3,7 +3,7 @@
 //Default constructor returns an intersection object with NoIntersection relation.
 Intersection::Intersection() : relation(IntersectionRelation::NoIntersection), collidingPoints(){}
 
-Intersection::Intersection(IntersectionRelation rel, const HyperSphere& points)
+Intersection::Intersection(IntersectionRelation rel, const IntersectingHyperSphere& points)
     : relation(rel), collidingPoints(points) {}
 
 //prints out the data stored in the object. Basically the type of the relation and the center and radius of the hypersphere 
@@ -31,9 +31,13 @@ void Intersection::printResult() const {
         std::cout << "Intersection Hypersphere Center: " << std::endl;
         for (float coord : collidingPoints.getCenter().getCoords()) {
             std::cout << coord << " ";
-            std::cout << std::endl;
         }
+        std::cout << std::endl;
         std::cout << "\nIntersection Hypersphere Radius: " << collidingPoints.getRadius() << std::endl;
+        std::cout << "\nIntersection Hypersphere Orientation: " << std::endl;
+        for (float coord : collidingPoints.getOrientation()) {
+            std::cout << coord << " ";
+        }
         break;
     case IntersectionRelation::OneInsideAnother:
         std::cout << "One Inside Another" << std::endl;

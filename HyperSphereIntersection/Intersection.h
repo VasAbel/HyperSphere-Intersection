@@ -1,7 +1,7 @@
 #ifndef INTERSECTION_H
 #define INTERSECTION_H
 
-#include "HyperSphere.h"
+#include "IntersectingHyperSphere.h"
 #include "IntersectionRelation.h"
 #include <iostream>
 
@@ -13,14 +13,14 @@
 class Intersection {
 private:
     IntersectionRelation relation;
-    HyperSphere collidingPoints;
+    IntersectingHyperSphere collidingPoints;
 
 public:
     Intersection();
-    Intersection(IntersectionRelation rel, const HyperSphere& points);
+    Intersection(IntersectionRelation rel, const IntersectingHyperSphere& points);
 
     inline IntersectionRelation getRelation() const { return relation; }
-    inline HyperSphere getCollidingPoints() const { return collidingPoints; }
+    inline IntersectingHyperSphere getCollidingPoints() const { return collidingPoints; }
 
     //prints out the data of the structure
     void printResult() const;

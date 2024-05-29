@@ -1,20 +1,20 @@
 #include <iostream>
 #include "Intersection.h"
 
+//aid function to calculate the normal vector
 static std::array<float, N> calculateOrientation(const HyperSphere& s1, const HyperSphere& s2) {
-    std::array<float, N> normal;
     std::array<float, N> orientation;
     float normalize = 0.0;
 
     for (int i = 0; i < N; i++) {
-        normal[i] = s2.getCenter().getCoords()[i] - s1.getCenter().getCoords()[i];
-        normalize += normal[i] * normal[i];
+        orientation[i] = s2.getCenter().getCoords()[i] - s1.getCenter().getCoords()[i];
+        normalize += orientation[i] * orientation[i];
     }
 
     normalize = std::sqrtf(normalize);
 
     for (int i = 0; i < N; i++) {
-        normal[i] /= normalize;
+        orientation[i] /= normalize;
     }
 
 
@@ -72,10 +72,10 @@ static Intersection checkIntersection(const HyperSphere& s1, const HyperSphere& 
 int main() {
     //Example use of the checkIntersection function
     Point center1 = { {0.0, 0.0, 0.0} };
-    Point center2 = { {4.0f, 0.0f, 0.0f} };
+    Point center2 = { {1.0f, 0.7f, 0.0f} };
 
-    HyperSphere sphere1 = { center1, 5.0f };
-    HyperSphere sphere2 = {center2, 5.0f};
+    HyperSphere sphere1 = { center1, 1.0f };
+    HyperSphere sphere2 = {center2, 1.0f};
 
     Intersection result = checkIntersection(sphere1, sphere2);
 

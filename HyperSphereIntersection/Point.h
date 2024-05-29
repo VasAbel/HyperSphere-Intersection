@@ -1,5 +1,4 @@
-#ifndef POINT_H
-#define POINT_H
+#pragma once
 
 #include <array>
 constexpr int N = 3;    //prepocessor macro for the dimension of the hyperspheres.
@@ -21,5 +20,3 @@ public:
     //setOneCoord is a setter function for setting one element of the coordinates at a time.
     inline void setOneCoord(float coord, int element) { coordinates[element] = coord; }
 };
-
-#endif

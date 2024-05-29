@@ -34,7 +34,7 @@ void Intersection::printResult() const {
         }
         std::cout << std::endl;
         std::cout << "\nIntersection Hypersphere Radius: " << collidingPoints.getRadius() << std::endl;
-        std::cout << "\nIntersection Hypersphere Orientation: " << std::endl;
+        std::cout << "\nIntersection Hypersphere Normal: " << std::endl;
         for (float coord : collidingPoints.getOrientation()) {
             std::cout << coord << " ";
         }

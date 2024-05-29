@@ -1,5 +1,4 @@
-#ifndef INTERSECTIONRELATION_H
-#define INTERSECTIONRELATION_H
+#pragma once
 
 //enum class representing the possible relations between two hyperspheres
 enum class IntersectionRelation {
@@ -10,5 +9,3 @@ enum class IntersectionRelation {
     OneInsideAnother,
     Coincident
 };
-
-#endif // INTERSECTIONRELATION_H

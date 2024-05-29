@@ -1,5 +1,4 @@
-#ifndef HYPERSPHERE_H
-#define HYPERSPHERE_H
+#pragma once
 
 #include "Point.h"
 
@@ -21,5 +20,3 @@ public:
     inline Point getCenter() const {return p;}
     inline float getRadius() const {return r;}
 }; 
-
-#endif
